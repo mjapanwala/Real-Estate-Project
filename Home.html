@@ -13,8 +13,11 @@
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
       <a href="GalleryWireframe.html" class="w3-bar-item w3-button">Our Homes</a>
-      <a href="About.html" class="w3-bar-item w3-button">About</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="#About" class="w3-bar-item w3-button">About Us</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
+      <a href="#Testimonials" class="w3-bar-item w3-button">Testimonials</a>
+      <a href="#Sitemap" class="w3-bar-item w3-button">Sitemap</a>
+      <a href="#FAQ" class="w3-bar-item w3-button">FAQ</a>
     </div>
   </div>
 </div>
@@ -40,25 +43,25 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">New York, USA</div>
-        <img src="images/NYBrownstone.jpg" alt="House" style="width:100%">
+        <a target="_blank" href="images/NYBrownstone.jpg"><img src="images/NYBrownstone.jpg" alt="New York House" height="300px" style="width:300px"></a>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">New Orleans, USA</div>
-        <img src="images/NOLA_shotgun_home.jpg" alt="House" style="width:100%">
+        <a target="_blank" href="images/NOLA.jpg"><img src="images/NOLA_shotgun_home.jpg" alt="New Orleans House" height="300px" style="width:300px"></a>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Paris,France</div>
-        <img src="images/ParisBalconey.jpg" alt="House" style="width:100%">
+        <a target="_blank" href="images/ParisBalconey.jpg"><img src="images/ParisBalconey.jpg" alt="Paris House" height="300px" style="width:300px"></a>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Tokyo, Japan</div>
-        <img src="images/Londonview.jpg" alt="House" style="width:100%">
+        <a target="_blank" href="images/Tokyo - Main.jpg"><img src="images/Londonview.jpg" alt="Tokyo House" height="300px" style="width:300px"></a>
       </div>
     </div>
   </div>
@@ -68,9 +71,12 @@
   </div>
 
   <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>We believe that the best way to travel is always to travel like a local. This is why we are sharing our homes with you!
+  <div class="w3-container w3-padding-32" id="About">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About Us</h3>
+    <p>We are a group of four classmates from the full stack development course at York University who have collectively decided to 
+      abandon our corporate jobs to share our homes, just enjoy life and pursue our dreams of entrepreneurship.
+      
+      We believe that the best way to travel is always to travel like a local. This is why we are sharing our homes with you!
         If you are the type who enjoys finding the best places to eat, and the best places to soak in the vibrancy and culture of
         a new destination, then please come stay with us! 
     </p>
@@ -93,6 +99,122 @@
       </button>
     </form>
   </div>
+  <style>
+    .container {
+      border: 2px solid #ccc;
+      background-color: #eee;
+      border-radius: 5px;
+      padding: 16px;
+      margin: 16px 0
+    }
+    
+    .container::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    .container img {
+      float: left;
+      margin-right: 20px;
+      border-radius: 50%;
+    }
+    
+    .container span {
+      font-size: 20px;
+      margin-right: 15px;
+    }
+    
+    @media (max-width: 500px) {
+      .container {
+          text-align: center;
+      }
+      .container img {
+          margin: auto;
+          float: none;
+          display: block;
+      }
+    }
+    </style>
+    <!-- Testimonials Section -->
+    <div class="w3-container w3-padding-32" id="Testimonials">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Testimonials</h3>
+      <p>
+        See what our clients have said about our vacation home services
+      </p>
+      <div class="container">
+        <img src="images/JM happy.jpg" alt="Avatar" style="width:90px">
+        <p><span>JM.</span> Toronto resident.</p>
+        <p>"I highly recommend RMJ to find you the perfect vacationhome!! This was my first vacation home-rental experience and it could not have been any better!"</p>
+      </div>
+      
+      <div class="container">
+        <img src="images/Jamie happy.jpg" alt="Avatar" style="width:90px">
+        <p><span>Jamie.</span> Los Angeles resident.</p>
+        <p>"My family and I could not be more pleased with the efforts and accomplishments made by the entire RMJ team. 
+          They answered any and all questions we had concerning any property we were interested in and helped us get the one we wanted.  I would highly recommend them to anyone!"</p>
+      </div>
+      <div class="container">
+        <img src="images/Joe happy.jpg" alt="Avatar" style="width:90px">
+        <p><span>Joe.</span> New York resident.</p>
+        <p>"As first time renters,  we had no idea what we were doing. The RMJ team made the rental process very easy. 
+          They knew exactly what we wanted and were incredibly helpful, efficient, reliable, and flexible." </p>
+      </div>
+      
+      <!-- Sitemap Section -->
+    <div class="w3-container w3-padding-32" id="Sitemap">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sitemap</h3>
+      <p>
+        Navigate Our Site
+      </p>
+      <ul style="list-style-type:square;">
+        <li><a href="GalleryWireframe.html">Our Homes</a></li>         
+        <ul>
+            <li><a href="GalleryWireframe.html">New York</a></li> 
+            <li><a href="GalleryWireframe.html">France</a></li>
+            <li><a href="GalleryWireframe.html">Hawaii</a></li> 
+            <li><a href="GalleryWireframe.html">Japan</a></li>  
+            <li><a href="GalleryWireframe.html">Germany</a></li> 
+          </ul>
+            </ul>
+            <ul>
+        <li><a href="Home.html#About">About Us</a></li>  
+        <li><a href="Home.html#contact">Contact Us</a></li>  
+        <li><a href="Home.html#Testimonials">Testimonials</a></li> 
+        <li><a href="Home.html#Sitemap">Sitemap</a></li>   
+       </ul>
+    
+  <!-- FAQ (Frequently Asked Question Section) -->
+  <div class="w3-container w3-padding-32" id="FAQ">
+      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">FAQ</h3>
+      <p>Check out the answers to some of the most frequent questions, asked of us:
+      </p>
+      <div class="parent-container">
+          <ul class="FAQ">
+            <li>
+              <h3 class="question">Why book a property rental with RMJ instead of a regular travel agency?
+                <div class="plus-minus-toggle collapsed"></div>
+              </h3>
+              <div class="answer">Answer. This answer is simple – because we have “specialized” in property rentals all overr the work for over 5 years!  Very few travel professionals know villa renting like we do!! This qualifies us to not only know the destinations well, but to hand-pick the properties we know are great, and to offer them to you!  Our expertise and knowledge will help you avoid the pitfalls of renting overseas and avoid any unpleasant surprises so that you will have the BEST vacation ever!.</div>
+            </li>
+            <li>
+              <h3 class="question">Do you have small properties for only 2 persons?
+                <div class="plus-minus-toggle collapsed"></div>
+              </h3>
+              <div class="answer">Answer.   YES, of course we have properties for only 2 persons!  In fact we have a variety of properties that are suitable for 2-35 people! Our website shows only a sampling of the many types of quality properties that we offer. We encourage you to contact us so we can begin to match you with the property that will best suit your needs. </div>
+            </li>
+            <li>
+                <h3 class="question">What type of fees do you charge?
+                  <div class="plus-minus-toggle collapsed"></div>
+                </h3>
+                <div class="answer">Answer.   We charge service fees ervice fees, which are included in the price of a property rental.  If you are booking another type of trip like a tour or a cruise there may be fees involved which you will be made aware of before booking. 
+                  </div>
+              </li>
+          </ul>
+        </div>
+    </div>
+    </div>
+  
 
 <!-- Image of NYC traffic -->
 <div class="w3-container">
