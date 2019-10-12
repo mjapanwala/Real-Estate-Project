@@ -7,21 +7,35 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>RMJ Vacation Homes</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="GalleryWireframe.html" class="w3-bar-item w3-button">Our Homes</a>
-      <a href="#About" class="w3-bar-item w3-button">About Us</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact Us</a>
-      <a href="#Testimonials" class="w3-bar-item w3-button">Testimonials</a>
-      <a href="#Sitemap" class="w3-bar-item w3-button">Sitemap</a>
-      <a href="#FAQ" class="w3-bar-item w3-button">FAQ</a>
-    </div>
+<div class="topnav" id ="mytopnav">
+    <a href="#home"><b>RMJ Vacation Homes</b></a>
+    <!-- Float links to the right -->
+    <div class="topnav-right">
+    <a href="#OurHomes">Our Homes</a>
+    <div class="dropdown">
+      <button class="dropbtn">About Us
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#About">About Us</a>
+        <a href="#Testimonials">Testimonials</a>
+        <a href="#FAQ">FAQ</a>
+      </div>
+    </div> 
+    <a href="#contact">Contact Us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 </div>
-
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
   <img class="w3-image" src="images/NOLA_shotgun_home.jpg" 
@@ -48,8 +62,8 @@
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">New Orleans, USA</div>
-        <a target="_blank" href="images/NOLA.jpg"><img src="images/NOLA_shotgun_home.jpg" alt="New Orleans House" height="300px" style="width:300px"></a>
+        <div class="w3-display-topleft w3-black w3-padding">Hawaii, USA</div>
+        <a target="_blank" href="images/Hawaiicoast.jpg"><img src="images/Hawaiicoast.jpg" alt="Hawaii Coast" height="300px" style="width:300px"></a>
       </div>
     </div>
     <div class="w3-col l3 m6 w3-margin-bottom">
@@ -61,7 +75,7 @@
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
         <div class="w3-display-topleft w3-black w3-padding">Tokyo, Japan</div>
-        <a target="_blank" href="images/Tokyo - Main.jpg"><img src="images/Londonview.jpg" alt="Tokyo House" height="300px" style="width:300px"></a>
+        <a target="_blank" href="images/Tokyo - Main.jpg"><img src="images/Tokyothumbnail.jpg" alt="Tokyo House" height="300px" style="width:300px"></a>
       </div>
     </div>
   </div>
@@ -160,29 +174,7 @@
         <p>"As first time renters,  we had no idea what we were doing. The RMJ team made the rental process very easy. 
           They knew exactly what we wanted and were incredibly helpful, efficient, reliable, and flexible." </p>
       </div>
-      
-      <!-- Sitemap Section -->
-    <div class="w3-container w3-padding-32" id="Sitemap">
-      <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sitemap</h3>
-      <p>
-        Navigate Our Site
-      </p>
-      <ul style="list-style-type:square;">
-        <li><a href="GalleryWireframe.html">Our Homes</a></li>         
-        <ul>
-            <li><a href="GalleryWireframe.html">New York</a></li> 
-            <li><a href="GalleryWireframe.html">France</a></li>
-            <li><a href="GalleryWireframe.html">Hawaii</a></li> 
-            <li><a href="GalleryWireframe.html">Japan</a></li>  
-            <li><a href="GalleryWireframe.html">Germany</a></li> 
-          </ul>
-            </ul>
-            <ul>
-        <li><a href="Home.html#About">About Us</a></li>  
-        <li><a href="Home.html#contact">Contact Us</a></li>  
-        <li><a href="Home.html#Testimonials">Testimonials</a></li> 
-        <li><a href="Home.html#Sitemap">Sitemap</a></li>   
-       </ul>
+
     
   <!-- FAQ (Frequently Asked Question Section) -->
   <div class="w3-container w3-padding-32" id="FAQ">
@@ -227,6 +219,7 @@
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
   <p>Come Stay With Us</p>
+  <a href="Sitemap.html">Site Map</a>
 </footer>
 
 </body>

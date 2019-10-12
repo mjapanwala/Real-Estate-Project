@@ -7,20 +7,35 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>RMJ Vacation Homes</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="GalleryWireframe.html" class="w3-bar-item w3-button">Our Homes</a>
-      <a href="Home.html#About" class="w3-bar-item w3-button">About Us</a>
-      <a href="Home.html#contact" class="w3-bar-item w3-button">Contact Us</a>
-      <a href="Home.html#Testimonials" class="w3-bar-item w3-button">Testimonials</a>
-      <a href="Home.html#Sitemap" class="w3-bar-item w3-button">Sitemap</a>
-      <a href="Home.html#FAQ" class="w3-bar-item w3-button">FAQ</a>
-    </div>
+<div class="topnav" id ="mytopnav">
+    <a href="Home.html"><b>RMJ Vacation Homes</b></a>
+    <!-- Float links to the right -->
+    <div class="topnav-right">
+    <a href="GalleryWireframe.html">Our Homes</a>
+    <div class="dropdown">
+      <button class="dropbtn">About Us
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="Home.html#About">About Us</a>
+        <a href="Home.html#Testimonials">Testimonials</a>
+        <a href="Home.html#FAQ">FAQ</a>
+      </div>
+    </div> 
+    <a href="#contact">Contact Us</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
   </div>
 </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 <head>
     <style>
         h2 {
@@ -147,13 +162,6 @@
 
 <body>
 
-
-
-    <ul>
-        <li><a class="active" href="#home">Home</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#about">About</a></li>
-    </ul>
 
 
     <h2>Come Stay With Us</h2>
