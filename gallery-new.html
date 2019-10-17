@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Come Stay with Us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet.css">
+
+<!-- Navbar (sit on top) -->
+<div class="topnav" id="mytopnav">
+    <a href="Home.html"><b>RMJ Vacation Homes</b></a>
+    <!-- Float links to the right -->
+    <div class="topnav-right">
+        <a href="GalleryWireframe.html">Our Homes</a>
+        <div class="dropdown">
+            <button class="dropbtn">About Us
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="Home.html#About">About Us</a>
+                <a href="Home.html#Testimonials">Testimonials</a>
+                <a href="Home.html#FAQ">FAQ</a>
+            </div>
+        </div>
+        <a href="Home.html#contact">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+</script>
+
+<head>
+    <style>
+        h2 {
+            background: url(images/cloud.jpg);
+            border: 1px solid #e7e7e7;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            padding-top: 50px;
+            letter-spacing: 3px;
+            height: 130px;
+            text-align: center;
+
+        }
+
+
+        .firstheader {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            margin-top: 100px;
+            color: black;
+            text-align: center;
+            position: relative;
+        }
+
+        .secondheader {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            margin-top: 0px;
+            color: black;
+            text-align: center;
+      
+        }
+
+        .thirdheader {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            margin-top: px;
+            color: black;
+            text-align: center;
+            position: relative;
+            
+        }
+
+        .fourthheader {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            margin-top: px;
+            color: black;
+            text-align: center;
+   
+        }
+
+
+        .fifthheader {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 30px;
+            margin-top: px;
+            color: black;
+            text-align: center;
+     
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px solid #e7e7e7;
+            background-color: white;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #B0E0E6;
+        }
+
+        li a.active {
+            color: black;
+            background-color: #ffffff;
+        }
+
+
+    
+            
+        
+
+        div.column {
+            margin-top: 30px;
+            margin-bottom: 100px;
+            margin-left: 90px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 250px;
+        }
+
+
+        .column:hover {
+            filter: opacity(0.7);
+            transition: 0.8s;
+
+        }
+
+        .column img {
+            width: 200px;
+            height: 150px;
+
+        }
+
+        div.gallery {
+            margin-top: 30px;
+            margin-bottom: 100px;
+            margin-left: 90px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 250px;}
+
+        div.gallery img {
+            width: 250px;
+            height: 150px;
+            padding: 0px 30px 0px 30px;
+
+        }
+
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+       
+
+        .row>.column {
+            padding: 0 20px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%;
+            overflow: auto;
+            background-color: lightgrey;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+
+        }
+
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: lightgray;
+        }
+
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        img {
+            margin-bottom: -4px;
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: lightgrey;
+            padding: 2px 16px;
+            color: black;
+        }
+
+        .demo {
+            opacity: 0.6;
+            
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <h2>Come Stay With Us</h2>
+
+    <h3 class="firstheader">New York</h3>
+    <div class="row">
+
+        <div class="column">
+
+            <img src="images/ny4.jpg" alt="Bedroom" onclick="openModal(); currentSlide(1)" class="hover-shadow cursor">
+            <div class="desc">Williamsburg, NY</div>
+        </div>
+
+        <div class="column">
+
+            <img src="images/ny6.jpg" alt="Living Room" onclick="openModal(); currentSlide(2)" class="hover-shadow cursor">
+            <div class="desc">Williamsburg, NY</div>
+        </div>
+
+        <div class="column">
+
+            <img src="images/ny3.jpg" alt="Living Room" onclick="openModal(); currentSlide(3)" class="hover-shadow cursor">
+            <div class="desc">Williamsburg, NY</div>
+        </div>
+
+        <div class="column">
+
+            <img src="images/ny2.jpg" alt="Living Room" onclick="openModal(); currentSlide(4)" class="hover-shadow cursor">
+            <div class="desc">Williamsburg, NY</div>
+        </div>
+
+
+    </div>
+
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/ny4.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/ny6.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/ny3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/ny2.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <div class="column">
+                <img class="demo cursor" src="images/ny4.jpg" style="width:100%" onclick="currentSlide(1)"
+                    alt="Exposed Brick Bedroom: Queen Sized Bed">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/ny6.jpg" style="width:100%" onclick="currentSlide(2)"
+                    alt="Entrance to Closet leading to Bathroom">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/ny3.jpg" style="width:100%" onclick="currentSlide(3)"
+                    alt="Dining Area">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="images/ny2.jpg" style="width:100%" onclick="currentSlide(4)"
+                    alt="Kitchen">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+            <h3 class="secondheader">France</h3>
+            <div class="gallery">
+        
+        
+                <a target="_blank" href="images/france4.jpg">
+                    <img src="images/france4.jpg" alt="Dining Room" width="600" height="400">
+                </a>
+                <div class="desc">Paris, France</div>
+            </div>
+        
+            <div class="gallery">
+                <a target="_blank" href="images/france5.jpg">
+                    <img src="images/france5.jpg" alt="Bedroom" wwidth="600" height="400">
+                </a>
+                <div class="desc">Paris, France</div>
+            </div>
+        
+            <div class="gallery">
+                <a target="_blank" href="images/france6.jpg">
+                    <img src="images/france6.jpg" alt="Living Room" wwidth="600" height="400">
+                </a>
+                <div class="desc">Paris, France</div>
+            </div>
+        
+            <div class="gallery">
+                <a target="_blank" href="images/france2.jpg">
+                    <img src="images/france2.jpg" alt="Living Room" width="600" height="400">
+                </a>
+                <div class="desc">Paris, France</div>
+            </div>
+        </div>
+        
+        
+        <div class="row">
+                <h3 class="thirdheader">Hawaii</h3>
+                <div class="gallery">
+            
+            
+                    <a target="_blank" href="images/hawaii1.jpg">
+                        <img src="images/hawaii1.jpg" alt="Dining Room" width="600" height="400">
+                    </a>
+                    <div class="desc">Maui, Hawaii</div>
+                </div>
+            
+                <div class="gallery">
+                    <a target="_blank" href="images/hawaii2.jpg">
+                        <img src="images/hawaii2.jpg" alt="Bedroom" wwidth="600" height="400">
+                    </a>
+                    <div class="desc">Maui, Hawaii</div>
+                </div>
+            
+                <div class="gallery">
+                    <a target="_blank" href="images/hawaii5.jpg">
+                        <img src="images/hawaii5.jpg" alt="Living Room" wwidth="600" height="400">
+                    </a>
+                    <div class="desc">Maui, Hawaii</div>
+                </div>
+            
+                <div class="gallery">
+                    <a target="_blank" href="images/hawaii4.jpg">
+                        <img src="images/hawaii4.jpg" alt="Living Room" width="600" height="400">
+                    </a>
+                    <div class="desc">Maui, Hawaii</div>
+                </div>
+            </div>
+        
+         
+        
+        <div class="row">
+            <h3 class="fourthheader">Japan</h3>
+            <div class="gallery">
+        
+        
+                <a target="_blank" href="images/tokyo1.jpg">
+                    <img src="images/tokyo1.jpg" alt="Dining Room" width="600" height="400">
+                </a>
+                <div class="desc">Tokyo, Japan</div>
+            </div>
+        
+            <div class="gallery">
+                <a target="_blank" href="images/tokyo2.jpg">
+                    <img src="images/tokyo2.jpg" alt="Kitchen" width="600" height="400">
+                </a>
+                <div class="desc">Tokyo, Japan</div>
+            </div>
+        
+            <div class="gallery">
+                <a target="_blank" href="images/tokyo3.jpg">
+                    <img src="images/tokyo3.jpg" alt="Living Room" width="600" height="400">
+                </a>
+                <div class="desc">Tokyo, Japan</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="images/tokyo4.jpg">
+                    <img src="images/tokyo4.jpg" alt="Bedroom" width="600" height="400">
+                </a>
+                <div class="desc">Tokyo, Japan</div>
+            </div>
+        
+            
+        </div>
+
+        <div class="row">
+        
+            <h3 class="fifthheader">Germany</h3>
+            <div class="gallery">
+        
+        
+                <a target="_blank" href="images/germany11.jpg">
+                    <img src="images/germany11.jpg" alt="Bedroom" width="600" height="400">
+                </a>
+                <div class="desc">Berlin, Germany</div>
+            </div>
+        
+            <div class="gallery">
+                <a target="_blank" href="images/germany10.jpg">
+                    <img src="images/germany10.jpg" alt="Living Room" width="600" height="400">
+                </a>
+                <div class="desc">Berlin, Germany</div>
+            </div>
+        
+            <div class="gallery">
+                <a target="_blank" href="images/germany8.jpg">
+                    <img src="images/germany8.jpg" alt="Kitchen" width="600" height="400">
+                </a>
+                <div class="desc">Berlin, Germany</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="images/germany9.jpg">
+                    <img src="images/germany9.jpg" alt="Kitchen" width="600" height="400">
+                </a>
+                <div class="desc">Berlin, Germany</div>
+            </div>
+        
+            </div>
+
+
+
+
+    <script>
+            function openModal() {
+              document.getElementById("myModal").style.display = "block";
+            }
+            
+            function closeModal() {
+              document.getElementById("myModal").style.display = "none";
+            }
+            
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("demo");
+              var captionText = document.getElementById("caption");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+              captionText.innerHTML = dots[slideIndex-1].alt;
+            }
+            </script>
+
+
+
+
+
+
+</body>
+
+</html>
