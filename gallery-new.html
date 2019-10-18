@@ -3,6 +3,8 @@
 <title> Come Stay with Us</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Gallery, Images, Homes">
+<meta name="description" content="This is a gallery of world class rentals">
 <link rel="stylesheet" href="stylesheet.css">
 
 <!-- Navbar (sit on top) -->
@@ -10,7 +12,7 @@
     <a href="Home.html"><b>RMJ Vacation Homes</b></a>
     <!-- Float links to the right -->
     <div class="topnav-right">
-        <a href="GalleryWireframe.html">Our Homes</a>
+        <a href="gallery-new.html">Our Homes</a>
         <div class="dropdown">
             <button class="dropbtn">About Us
                 <i class="fa fa-caret-down"></i>
@@ -38,6 +40,7 @@
 
 <head>
     <style>
+        /* Large Main Header */
         h2 {
             background: url(images/palm.jpg);
             background-repeat: no-repeat;
@@ -53,7 +56,7 @@
 
         }
 
-
+        /* New York Header */
         .firstheader {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 30px;
@@ -63,15 +66,18 @@
             position: relative;
         }
 
+        /* France Header */
         .secondheader {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 30px;
             margin-top: 0px;
             color: black;
             text-align: center;
-      
+
         }
 
+
+        /* Hawaii Header */
         .thirdheader {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 30px;
@@ -79,26 +85,27 @@
             color: black;
             text-align: center;
             position: relative;
-            
+
         }
 
+        /* Japan Header */
         .fourthheader {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 30px;
             margin-top: px;
             color: black;
             text-align: center;
-   
+
         }
 
-
+        /* Arizona Header */
         .fifthheader {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             font-size: 30px;
             margin-top: px;
             color: black;
             text-align: center;
-     
+
         }
 
         ul {
@@ -130,58 +137,50 @@
         li a.active {
             color: black;
             background-color: #ffffff;
+
         }
 
+        .row {
 
-    
-            
-        
+            margin-left: 15%;
+            margin-right: 15%;
+        }
 
-        div.column {
+        /* Gallery */
+
+        .column {
             margin-top: 30px;
             margin-bottom: 100px;
-            margin-left: 90px;
+            margin-left: 20px;
             border: 1px solid #ccc;
             float: left;
-            width: 250px;
+            width: 230px;
+
         }
 
-
+        /* Image Hover */
         .column:hover {
             filter: opacity(0.7);
             transition: 0.8s;
 
+
         }
 
+        /* Image Size */
         .column img {
-            width: 200px;
+            width: 195px;
             height: 150px;
 
         }
 
-        div.gallery {
-            margin-top: 30px;
-            margin-bottom: 100px;
-            margin-left: 90px;
-            border: 1px solid #ccc;
-            float: left;
-            width: 250px;}
-
-        div.gallery img {
-            width: 250px;
-            height: 150px;
-            padding: 0px 30px 0px 30px;
-
-        }
-
-
+        /* Image Description */
         .desc {
             padding: 15px;
             text-align: center;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
-       
+
 
         .row>.column {
             padding: 0 20px;
@@ -193,6 +192,7 @@
             clear: both;
         }
 
+        /* Image Preview */
         .modal {
             display: none;
             position: fixed;
@@ -200,7 +200,7 @@
             padding-top: 100px;
             left: 0;
             top: 0;
-            width: 100%; 
+            width: 100%;
             height: 100%;
             overflow: auto;
             background-color: lightgrey;
@@ -213,6 +213,7 @@
             padding: 0;
             width: 90%;
             max-width: 1200px;
+
         }
 
         .close {
@@ -225,12 +226,11 @@
 
         }
 
-
         .close:hover,
         .close:focus {
             color: #999;
             text-decoration: none;
-            cursor: pointer;
+
         }
 
         .mySlides {
@@ -279,6 +279,7 @@
             margin-bottom: -4px;
         }
 
+        /* Image Preview Description */
         .caption-container {
             text-align: center;
             background-color: lightgrey;
@@ -288,7 +289,7 @@
 
         .demo {
             opacity: 0.6;
-            
+
         }
 
         .active,
@@ -298,10 +299,12 @@
 
         img.hover-shadow {
             transition: 0.3s;
+
         }
 
         .hover-shadow:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
         }
     </style>
 
@@ -309,8 +312,11 @@
 
 <body>
 
-
+    <!-- Main Header -->
     <h2>Come Stay With Us</h2>
+
+
+    <!-- New York Gallery -->
 
     <h3 class="firstheader">New York</h3>
     <div class="row">
@@ -323,26 +329,29 @@
 
         <div class="column">
 
-            <img src="images/ny6.jpg" alt="Living Room" onclick="openModal(); currentSlide(2)" class="hover-shadow cursor">
+            <img src="images/ny6.jpg" alt="Living Room" onclick="openModal(); currentSlide(2)"
+                class="hover-shadow cursor">
             <div class="desc">Williamsburg, NY</div>
         </div>
 
         <div class="column">
 
-            <img src="images/ny3.jpg" alt="Living Room" onclick="openModal(); currentSlide(3)" class="hover-shadow cursor">
+            <img src="images/ny3.jpg" alt="Living Room" onclick="openModal(); currentSlide(3)"
+                class="hover-shadow cursor">
             <div class="desc">Williamsburg, NY</div>
         </div>
 
         <div class="column">
 
-            <img src="images/ny2.jpg" alt="Living Room" onclick="openModal(); currentSlide(4)" class="hover-shadow cursor">
+            <img src="images/ny2.jpg" alt="Living Room" onclick="openModal(); currentSlide(4)"
+                class="hover-shadow cursor">
             <div class="desc">Williamsburg, NY</div>
         </div>
 
 
     </div>
 
-
+    <!-- New York Gallery Preview -->
     <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
         <div class="modal-content">
@@ -390,184 +399,185 @@
         </div>
     </div>
 
+
+    <!-- France Gallery -->
     <div class="row">
-            <h3 class="secondheader">France</h3>
-            <div class="gallery">
-        
-        
-                <a target="_blank" href="images/france4.jpg">
-                    <img src="images/france4.jpg" alt="Dining Room" width="600" height="400">
-                </a>
-                <div class="desc">Paris, France</div>
-            </div>
-        
-            <div class="gallery">
-                <a target="_blank" href="images/france5.jpg">
-                    <img src="images/france5.jpg" alt="Bedroom" wwidth="600" height="400">
-                </a>
-                <div class="desc">Paris, France</div>
-            </div>
-        
-            <div class="gallery">
-                <a target="_blank" href="images/france6.jpg">
-                    <img src="images/france6.jpg" alt="Living Room" wwidth="600" height="400">
-                </a>
-                <div class="desc">Paris, France</div>
-            </div>
-        
-            <div class="gallery">
-                <a target="_blank" href="images/france2.jpg">
-                    <img src="images/france2.jpg" alt="Living Room" width="600" height="400">
-                </a>
-                <div class="desc">Paris, France</div>
-            </div>
-        </div>
-        
-        
-        <div class="row">
-                <h3 class="thirdheader">Hawaii</h3>
-                <div class="gallery">
-            
-            
-                    <a target="_blank" href="images/hawaii1.jpg">
-                        <img src="images/hawaii1.jpg" alt="Dining Room" width="600" height="400">
-                    </a>
-                    <div class="desc">Maui, Hawaii</div>
-                </div>
-            
-                <div class="gallery">
-                    <a target="_blank" href="images/hawaii2.jpg">
-                        <img src="images/hawaii2.jpg" alt="Bedroom" wwidth="600" height="400">
-                    </a>
-                    <div class="desc">Maui, Hawaii</div>
-                </div>
-            
-                <div class="gallery">
-                    <a target="_blank" href="images/hawaii5.jpg">
-                        <img src="images/hawaii5.jpg" alt="Living Room" wwidth="600" height="400">
-                    </a>
-                    <div class="desc">Maui, Hawaii</div>
-                </div>
-            
-                <div class="gallery">
-                    <a target="_blank" href="images/hawaii4.jpg">
-                        <img src="images/hawaii4.jpg" alt="Living Room" width="600" height="400">
-                    </a>
-                    <div class="desc">Maui, Hawaii</div>
-                </div>
-            </div>
-        
-         
-        
-        <div class="row">
-            <h3 class="fourthheader">Japan</h3>
-            <div class="gallery">
-        
-        
-                <a target="_blank" href="images/tokyo1.jpg">
-                    <img src="images/tokyo1.jpg" alt="Dining Room" width="600" height="400">
-                </a>
-                <div class="desc">Tokyo, Japan</div>
-            </div>
-        
-            <div class="gallery">
-                <a target="_blank" href="images/tokyo2.jpg">
-                    <img src="images/tokyo2.jpg" alt="Kitchen" width="600" height="400">
-                </a>
-                <div class="desc">Tokyo, Japan</div>
-            </div>
-        
-            <div class="gallery">
-                <a target="_blank" href="images/tokyo3.jpg">
-                    <img src="images/tokyo3.jpg" alt="Living Room" width="600" height="400">
-                </a>
-                <div class="desc">Tokyo, Japan</div>
-            </div>
-            <div class="gallery">
-                <a target="_blank" href="images/tokyo4.jpg">
-                    <img src="images/tokyo4.jpg" alt="Bedroom" width="600" height="400">
-                </a>
-                <div class="desc">Tokyo, Japan</div>
-            </div>
-        
-            
+        <h3 class="secondheader">France</h3>
+        <div class="column">
+
+            <a target="_blank" href="images/france4.jpg">
+                <img src="images/france4.jpg" alt="Dining Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Paris, France</div>
         </div>
 
-        <div class="row">
-        
-            <h3 class="fifthheader">Germany</h3>
-            <div class="gallery">
-        
-        
-                <a target="_blank" href="images/germany11.jpg">
-                    <img src="images/germany11.jpg" alt="Bedroom" width="600" height="400">
-                </a>
-                <div class="desc">Berlin, Germany</div>
-            </div>
-        
-            <div class="gallery">
-                <a target="_blank" href="images/germany10.jpg">
-                    <img src="images/germany10.jpg" alt="Living Room" width="600" height="400">
-                </a>
-                <div class="desc">Berlin, Germany</div>
-            </div>
-        
-            <div class="gallery">
-                <a target="_blank" href="images/germany8.jpg">
-                    <img src="images/germany8.jpg" alt="Kitchen" width="600" height="400">
-                </a>
-                <div class="desc">Berlin, Germany</div>
-            </div>
-            <div class="gallery">
-                <a target="_blank" href="images/germany9.jpg">
-                    <img src="images/germany9.jpg" alt="Kitchen" width="600" height="400">
-                </a>
-                <div class="desc">Berlin, Germany</div>
-            </div>
-        
-            </div>
+        <div class="column">
+            <a target="_blank" href="images/france5.jpg">
+                <img src="images/france5.jpg" alt="Bedroom" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Paris, France</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/france6.jpg">
+                <img src="images/france6.jpg" alt="Living Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Paris, France</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/france2.jpg">
+                <img src="images/france2.jpg" alt="Living Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Paris, France</div>
+        </div>
+    </div>
+
+    <!-- Hawaii Gallery -->
+    <div class="row">
+        <h3 class="thirdheader">Hawaii</h3>
+        <div class="column">
+
+
+            <a target="_blank" href="images/hawaii1.jpg">
+                <img src="images/hawaii1.jpg" alt="Dining Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Maui, Hawaii</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/hawaii2.jpg">
+                <img src="images/hawaii2.jpg" alt="Bedroom" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Maui, Hawaii</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/hawaii5.jpg">
+                <img src="images/hawaii5.jpg" alt="Living Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Maui, Hawaii</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/hawaii4.jpg">
+                <img src="images/hawaii4.jpg" alt="Living Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Maui, Hawaii</div>
+        </div>
+    </div>
+
+
+    <!-- Japan Gallery -->
+    <div class="row">
+        <h3 class="fourthheader">Japan</h3>
+        <div class="column">
+
+
+            <a target="_blank" href="images/tokyo1.jpg">
+                <img src="images/tokyo1.jpg" alt="Dining Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Tokyo, Japan</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/tokyo2.jpg">
+                <img src="images/tokyo2.jpg" alt="Kitchen" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Tokyo, Japan</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/tokyo3.jpg">
+                <img src="images/tokyo3.jpg" alt="Living Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Tokyo, Japan</div>
+        </div>
+        <div class="column">
+            <a target="_blank" href="images/tokyo4.jpg">
+                <img src="images/tokyo4.jpg" alt="Bedroom" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Tokyo, Japan</div>
+        </div>
+
+
+    </div>
+    <!-- Germany Gallery -->
+    <div class="row">
+
+        <h3 class="fifthheader">Germany</h3>
+        <div class="column">
+
+
+            <a target="_blank" href="images/germany11.jpg">
+                <img src="images/germany11.jpg" alt="Bedroom" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Berlin, Germany</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/germany10.jpg">
+                <img src="images/germany10.jpg" alt="Living Room" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Berlin, Germany</div>
+        </div>
+
+        <div class="column">
+            <a target="_blank" href="images/germany8.jpg">
+                <img src="images/germany8.jpg" alt="Kitchen" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Berlin, Germany</div>
+        </div>
+        <div class="column">
+            <a target="_blank" href="images/germany9.jpg">
+                <img src="images/germany9.jpg" alt="Kitchen" width="200" height="150" class="hover-shadow cursor">
+            </a>
+            <div class="desc">Berlin, Germany</div>
+        </div>
+
+    </div>
 
 
 
 
     <script>
-            function openModal() {
-              document.getElementById("myModal").style.display = "block";
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
             }
-            
-            function closeModal() {
-              document.getElementById("myModal").style.display = "none";
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
             }
-            
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("demo");
-              var captionText = document.getElementById("caption");
-              if (n > slides.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";
-              dots[slideIndex-1].className += " active";
-              captionText.innerHTML = dots[slideIndex-1].alt;
-            }
-            </script>
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 
 
 
